@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const ts = require('gulp-typescript');
 const project = ts.createProject('tsconfig.json')
-
+const os = require('os');
 
 gulp.task('compile', () => {
   return gulp.src('src/**/*.ts')
@@ -28,7 +28,7 @@ gulp.task('build', gulp.parallel('compile', 'copy'));
 
 // This is supposed to copy the dist folder into the modules directory for testing. Only works if you've set it up the right way
 //This works if development path is FoundryVTT/Data/dev/modules/swade-item-macros
-const MODULEPATH = "~/Library/AppliationSupport/FoundryVTT/Data/modules/remix-quest"
+const MODULEPATH = os.homedir() + "/Library/ApplicationSupport/FoundryVTT/Data/modules/remix-quest"
 
 gulp.task('foundry', () => {
   return gulp.src('dist/**').pipe(gulp.dest(MODULEPATH))

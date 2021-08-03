@@ -1,20 +1,22 @@
 {
   "name": "foundry-typescript-template",
   "version": "1.0.0",
-  "description": "Foundry VTT Typescript Template",
+  "description": "Pockets Quest Module for FVTT",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "foundry": "gulp foundry",
+    "update": "gulp update"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "^0.8.8-8",
     "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1"
   },
   "dependencies": {
     "@types/node": "^14.10.1",
-    "foundry-pc-types": "gitlab:foundry-projects/foundry-pc/foundry-pc-types",
     "typescript": "^4.0.2"
   }
 }
